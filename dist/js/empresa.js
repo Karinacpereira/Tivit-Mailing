@@ -9,8 +9,8 @@ const renderEnterprise = () => {
             <div class="d-flex flex-column p-2">
               <button class="button m-3">Empresa</button>
               <div>
-                <button><a href="/enterprise/login">Login</a></button>
-                <button><a href="/enterprise/signup">Cadastro</a></button>
+                <button class="button"><a href="/enterprise/login">Login</a></button>
+                <button class="button"><a href="/enterprise/signup">Cadastro</a></button>
               </div>
             </div>
           </div>

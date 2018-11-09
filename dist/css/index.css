@@ -16,16 +16,23 @@
   background-color: #F3F3F3;
 }
 
+main{
+  font-family: 'Bree Serif', serif;
+  padding: 50px;
+}
+
 .page{
   font-family: 'Bree Serif', serif;
+  width: 500px;
+  align-items: center;
 }
 
 .choice{
   margin-top: 100px;
 }
 
-#logo{
-  height: 5vh;
+.logo{
+  height: 4vh;
 }
 
 .button{
@@ -40,4 +47,35 @@
 
 .button:hover{
   background-color: #8e0004;
+}
+
+a:hover, a:visited, a:link, a:active{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.form-signin input{
+  margin: 10px 150px;
+}
+
+.form-signin select{
+  margin: 10px 150px;
+}
+
+.sign-in-company{
+  width: 80px;
+  align-self: center;
+}
+
+.signup{
+  align-self: center;
+}
+
+.group-btn{
+  border: 1px solid #FFFFFF;
+}
+
+#btnGroupAddon{
+  background-color: #CE161B;
+  color: #FFFFFF;
 }
