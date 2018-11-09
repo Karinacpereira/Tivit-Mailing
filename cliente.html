@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+    <script src="firebase.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/4843ec205e/UntitledProject/style.css">
+    <title>Feed</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header"><span class="icon-star" style="font-size:55px; color:white;"></span></div>
+      <div class="aside d-flex align-items-center flex-column pt-5">
+        <span class="icon-user-circle-o" style="font-size:55px; color:white;"></span>
+        <h1 class="user-name mt-4" style="color:white;"></h1>
+      </div>
+      <div class="main form-group p-5">
+        <form>
+          <textarea  rows="4" cols="50" class="post-input form-control" placeholder="Fale-me mais sobre você!"></textarea>
+          <button id="enviar" type="button" class="send-button" value="postar">Postar</button>
+        </form>
+        <select  class="drop-menu">
+          <option class="drop-item" value="public" selected>Publico</option>
+          <option class="drop-item" value="friends">Apenas Amigos</option>
+          <option class="drop-item" value="myself">Somente eu</option>
+        </select>
+      </div>
+      <div class="content">
+        <ul class="users-list mt-4"></ul>
+        <h4>Amigos</h4>
+        <ul class="users-follow mt-5"></ul>
+        <button type="button" class="btn-info form-control mt-3" data-toggle="modal" data-target="#cadastroUsuario">Cadastre-se</button>
+      </div>
+      <div class="footer">
+       <ul class="posts-list"></ul>
+      </div>
+    </div>
+
+    <!-- MODAL CADASTRO -->
+    <div class="modal fade" id="cadastroUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header text-white" style="background-color:#ADD8E6;">
+              <h5 class="modal-title ml-4" id="exampleModalCenterTitle" style="background-color:#ADD8E6;">Cadastro de usuário</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="form-signin form-group">                
+                  <label>Nome:
+                  <input type="name" id="people-name" class="form-control mb-2" placeholder="Nome" required autofocus>
+  
+                  <label>Email:
+                  <input type="email" id="people-email" class="form-control" placeholder="E-mail" required autofocus><br />
+  
+                  <select type="gender" class="genero" id="people-gender" placeholder="Gênero">        
+                      <option selected>Gênero</option>        
+                      <option value="feminino">Feminino</option>        
+                      <option value="masculino">Masculino</option>        
+                      <option value="outros">Outros</option>        
+                  </select>        
+                  <form method="get" action=".">
+  
+                      <label>Cep:
+                      <input name="cep" type="text" class="form-control" id="cep" value="" size="10" maxlength="9" /></label><br />
+  
+                      <label>Rua:
+                      <input name="rua" type="text" class="form-control" id="rua" size="60" /></label><br />
+  
+                      <label>Bairro:
+                      <input name="bairro" type="text" class="form-control" id="bairro" size="40" /></label><br />
+  
+                      <label>Cidade:
+                      <input name="cidade" type="text" class="form-control" id="cidade" size="40" /></label><br />
+  
+                      <label>Estado:
+                      <input name="uf" type="text" class="form-control" id="uf" size="2" /></label><br />
+  
+                      <label>Telefone fixo:
+                          <input name="telefone" type="text" class="form-control" id="telefone" size="10" /></label><br />
+  
+                      <label>Celular:
+                          <input name="celular" type="text" class="form-control" id="celular" size="10" /></label><br />
+                    </form>
+                  <input type="date" id="sign-up-birth" class="nascimento" placeholder="Data de nascimento" required autofocus>
+                  <select type="text" class="" id="sign-up-schooling" placeholder="Escolaridade">
+                      <option selected>Escolaridade</option>
+                      <option value="1">Fundamental Incompleto</option>
+                      <option value="2">Fundamental Completo</option>
+                      <option value="3">Médio Incompleto</option>
+                      <option value="4">Médio Completo</option>
+                      <option value="5">Superior Incompleto</option>
+                      <option value="6">Superior Completo</option>
+                      <option value="7">Pós Graduação</option>
+                  </select>
+                  <select type="text" class="" id="sign-up-schooling" placeholder="Classe social">
+                      <option selected>Classe social</option>        
+                      <option value="1">Classe alta</option>        
+                      <option value="2">Classe média</option>        
+                      <option value="3">Classe baixa</option>        
+                  </select>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="people-signup" class="sign-up-button btn mt-3">Cadastrar</button>    
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="cliente.js"></script>
+  </body>
+</html>
