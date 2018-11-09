@@ -1,0 +1,23 @@
+{
+  "name": "talentfest-gft",
+  "version": "1.0.0",
+  "description": "an internet banking dashboard",
+  "main": "dashboard.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marciapsilva/talentfest-gft.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marciapsilva/talentfest-gft/issues"
+  },
+  "homepage": "https://github.com/marciapsilva/talentfest-gft#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

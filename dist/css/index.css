@@ -1,0 +1,43 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: auto;
+  background-color: #F3F3F3;
+}
+
+.page{
+  font-family: 'Bree Serif', serif;
+}
+
+.choice{
+  margin-top: 100px;
+}
+
+#logo{
+  height: 5vh;
+}
+
+.button{
+  background-color: #CE161B;
+  font-family: 'Bree Serif', serif;
+  border: 1px solid #8e0004;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-size: 3vh;
+  padding: 3px;
+}
+
+.button:hover{
+  background-color: #8e0004;
+}
