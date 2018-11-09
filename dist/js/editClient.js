@@ -5,6 +5,7 @@ const renderEdit = () => {
         <div class="btn-group mr-2 group-btn" role="group" aria-label="First group">
           <button type="button" class="btn button group-btn"><a href="/menu/addClient">Novo Cliente</a></button>
           <button type="button" class="btn button group-btn"><a href="/menu/editClient">Gerenciar Cliente</a></button>
+          <button type="button" class="btn button group-btn"><a href="/menu/dashboard">Dashboard</a></button>
         </div>
         <div class="input-group">
           <div class="input-group-prepend">

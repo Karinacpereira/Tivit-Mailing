@@ -6,7 +6,7 @@ const renderClient = () => {
     <div class="rigth">
       <section class="text-center">
         <form class="form-signin d-flex flex-column m-5">
-          <h5>Usuário cadestre-se aqui:</h5>
+          <h5>Usuário cadastre-se aqui:</h5>
           <input type="name" id="sign-up-name" placeholder="Nome" required autofocus>
           <input type="email" id="sign-up-email" placeholder="E-mail" required autofocus>
           <select type="gender" id="sign-up-password" placeholder="Gênero">

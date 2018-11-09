@@ -7,6 +7,7 @@ $(document).ready(() => {
   page('/menu', menu);
   page('/menu/addClient', addClient);
   page('/menu/editClient', editClient);
+  page('/menu/dashboard', dashboard);
   page();
 })
 
@@ -40,4 +41,8 @@ function addClient() {
 
 function editClient() {
   $('main').html(renderEdit());
+}
+
+function dashboard() {
+  $('main').html(renderDashboard());
 }

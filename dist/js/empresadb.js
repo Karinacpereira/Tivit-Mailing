@@ -38,8 +38,6 @@ $(document).ready(function(){
       var name = $("#sign-up-name").val();
       var email = $("#sign-up-email").val();
       var password = $("#sign-up-password").val();
-      var genero = $(".genero").val();
-      var nascimento = $(".nascimento").val();
 
       firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(function(response){
